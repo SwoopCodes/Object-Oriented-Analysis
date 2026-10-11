@@ -17,6 +17,6 @@ AI tool: Claude (Anthropic), Level 3 use as per the CA1 brief.
 
 | Suggestion | Decision |
 |------------|----------|
-| Facilities staff are listed as a direct stakeholder but as an offstage actor. Offstage means they don't use the system, but logging faults is in my scope. Need to pick one. | |
-| "Service providers" isn't in the scenario. Either say who this means or remove it. | |
-| "Visitor / Guest" are joined in the actor goals, but the scenario uses both words and doesn't say if they're the same. Added a clarification question. | |
+| Facilities staff are listed as a direct stakeholder but as an offstage actor. Offstage means they don't use the system, but logging faults is in my scope. Need to pick one. | Facilities staff changed from offstage to primary. |
+| "Service providers" isn't in the scenario. Either say who this means or remove it. | Indeed service providers aren't mentioned in the scenario. Removing it from stakeholders document |
+| "Visitor / Guest" are joined in the actor goals, but the scenario uses both words and doesn't say if they're the same. Added a clarification question. | Good catch. clarification question required in this context|
