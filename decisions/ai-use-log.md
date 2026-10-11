@@ -20,3 +20,14 @@ AI tool: Claude (Anthropic), Level 3 use as per the CA1 brief.
 | Facilities staff are listed as a direct stakeholder but as an offstage actor. Offstage means they don't use the system, but logging faults is in my scope. Need to pick one. | Facilities staff changed from offstage to primary. |
 | "Service providers" isn't in the scenario. Either say who this means or remove it. | Indeed service providers aren't mentioned in the scenario. Removing it from stakeholders document |
 | "Visitor / Guest" are joined in the actor goals, but the scenario uses both words and doesn't say if they're the same. Added a clarification question. | Good catch. clarification question required in this context|
+
+**11/10/2026 - Review of work against lecture notes**
+
+| Suggestion | Decision |
+|------------|----------|
+| AI compared my constraints with Lecture 3’s definitions and suggested that my constraints (internet failure, members not seeing other organisations, temp staff not seeing commercial info) fit Lecture 3's definitions of non-functional requirements and business rules better than constraints. | Moved two to business rules BR01, BR02. Internet failure moves to NFRs at requirements stage |
+| AI had earlier removed IDs (A-01, CQ-05) at my request. After checking the lecture notes, it pointed out that the lectures use IDs (FR01, UC-03) and the traceability chain depends on them. Suggested using IDs from requirements onwards. | Kept. Used Claude Code to add IDs to problems, assumptions and questions (formatting only, no wording changed). IDs will be used from requirements onwards |
+| Quotes in my consequences were attached to the wrong problems (e.g. the manager's equipment quote was under conflicting reservations). | Kept. Matched each quote to the problem it actually describes and made recurring holiday dates a separate problem |
+| Naming the system "Workspace Reservation & Access System" could blur the boundary with the external access system, which is out of scope. | Renamed the system to *'Workspace Management System'* as it suits the idea of the system a lot better |
+| My assumption about syncing offline bookings described how the solution would work rather than something to verify. | Dropped it from assumptions. The internet failure need is covered by the constraint, which becomes an NFR later |
+| Stakeholder table says organisations "pay for memberships", which the scenario doesn't state. | Removed line about paying for emberships in the stakeholder analysis and added a clarification question|
