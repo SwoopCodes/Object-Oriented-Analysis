@@ -1,1 +1,9 @@
 # ca1-analysis
+
+## Identifiers
+
+- P = problem
+- A = assumption
+- CQ = clarification question
+
+More prefixes will be added for requirements, rules, use cases and scenarios.
