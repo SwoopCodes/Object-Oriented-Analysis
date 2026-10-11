@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*.docx
+~$*.xlsx
+.~lock.*
+*.tmp
+*.bak
+.vscode/
+.idea/
