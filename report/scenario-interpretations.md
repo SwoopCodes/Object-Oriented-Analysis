@@ -5,7 +5,7 @@ Tralee Enterprise Workspace provides office space to customers that can be booke
 
 ## Problems
 The business currently manages bookings, access, and equipment issues through spreadsheets, calendars, and emails. 
-Due to this, conflicting reservations occur and information becomes unclear about customer access, capacity, and availability of services.
+Conflicting reservations occur and information becomes unclear about customer access, capacity, and availability of services.
 
 ## Members
 **Members may be:**
@@ -71,7 +71,7 @@ Sometimes bookings are made provisionally, and staff disagree on how long provis
 
 **Members check in through an access system or reception.**
 
-*Occasionally against procedure:*
+*Occasionally:*
 - Customers arrive without a visible booking
 - Bring an unexpected guest
 - Use a different free desk
@@ -111,15 +111,3 @@ Staff need reliable usage information to pass on for charging.
 - Members need to see their own bookings and public resource info (but not other organisations' activity).
 - Different staff (reception, facilities, temp cover) require different access views. Temp staff must handle arrivals without seeing commercial info.
 
----
-
-# Uncertainty and rules register
-
-**Clarification Questions for Stakeholders:**
-- Which plan rules may be overridden and who has the authority to approve exceptions?
-- What is the maximum time a provisional or recurring booking can reserve resources before being confirmed or dropped?
-- How should future bookings in the calendar be treated when a membership is suspended or ends?
-- Who exactly (member, receptionist, or manager) is allowed to approve guests and temporary access?
-- How do no-shows and unrecorded resource changes officially affect a member's usage limits?
-- What are the exact rules for when a partially usable resource may continue to be booked?
-- Which specific booking, membership, and charge information is visible to each individual staff role?
