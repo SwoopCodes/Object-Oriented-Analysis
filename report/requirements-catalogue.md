@@ -4,17 +4,17 @@
 
 ## Functional Requirements
 
-| ID | Requirement | Type | Source | MoSCoW | Verification |
-| --- | --- | --- | --- | --- | --- |
-| **FR01**| The system shall not allow members to see other organisation's activities | Functional  | **BR01** | Must | Test: Login with user account and try view external activities |
-| **FR02** | The system shall allow a receptionist/staff to update booking  | Functional |**P01** | Must | Test: Receptionist to change booking from one resource to another |
-| **FR03** | The system shall provide easy to access information and read information on access, capacity and availability  | Functional | **P02** | Should | Test: Reception staff try to access and navigate around system to find access, capacity and availability information |
-| **FR04** | The system shall monitor where equipment is currently located or if its under repair  | Functional | **P06** | Must | Test: Receptionist/workspace manager moved equipment out of a room or sets it as 'under-repair' and attempts to make a booking with that equipment being specified |
-| **FR05** | The system shall record and store past information on booking information for usage information to charge members  | Functional | **P10** | Must | Test: Accounting staff to try access and view past usage information |
-| **FR06** | The system shall facilities staff to monitor room equipment and the usability status of a room  | functional | **Stakeholders.md** | ... | Test: find room with reserved or damaged equipment through system and check it's booking status (Can the room be booked for a certain use case even if the equipment is reserved elsewhere) |
-| **FR07** | The system shall provide limited information depending on the role an actor has in the system  | Functional | **Purpose-scope-boundary.md** | ... | Test: Facilities staff would login and try to view booking information. The outcome should be that they cannot view it |
-| **FR08** | The system shall provide clear messages to members if a booking is made, cancelled or updated   | Functional | **Scenario-interpretations.md** | ... | Test: A member makes a booking, updates it and then cancels it and checks if the information he recieves is accurate to the changes they made |
-| **FR09** | ... | ... | ... | ... | ... |
-| **FR10** | ... | ... | ... | ... | ... |
-| **FR11** | ... | ... | ... | ... | ... |
-| **FR12** | ... | ... | ... | ... | ... |
+| ID | Requirement | Source | MoSCoW | Verification |
+| --- | --- | --- | --- | --- |
+| **FR01** | The system shall not show a member the bookings or activity of any other organisation | **BR01** | Must | Test: A member of organisation A logs in and checks that none of organisation B's bookings appear in any view or search |
+| **FR02** | The system shall allow reception staff to move a booking to a different resource, provided the new resource is free for the booked time | **P08**, **P01** | Must | Test: Reception staff move a desk booking to a free desk and check it updates, then try to move it to an occupied desk and check it is rejected |
+| **FR03** | The system shall show reception staff and members the capacity, layout, accessibility, equipment and current availability of each room in one place | **P02** | Should | Test: Open a room as reception staff and as a member, and check all five items are shown without consulting another source |
+| **FR04** | The system shall allow facilities staff to set the status of a piece of equipment (e.g. available, under repair) | **P06** | Must | Test: Facilities staff mark a projector as under repair and check it can no longer be selected on a new booking |
+| **FR05** | The system shall record usage information for every booking and check-in so that it can be passed on for charging | **P11**, **CQ09** | Must | Test: The workspace manager completes a booking and a check-in and checks that both appear in the usage record. (Whether the system also prices them is held open by CQ09.) |
+| **FR06** | The system shall allow facilities staff to log a fault against a room or resource, mark it as fully unavailable or partially usable, and record the limitation | **P07**, **CQ06** | Must | Test: Log a fault that limits but does not close a room and check that the limitation is shown when someone books it |
+| **FR07** | The system shall hide members' commercial information from temporary cover staff while still letting them handle arrivals | **BR02**, **CQ07** | Must | Test: Log in as temporary cover staff, check in a member and check that plan, allowance and charge details are not shown. (The exact hidden fields depend on CQ07.) |
+| **FR08** | The system shall tell members when a booking is relocated, shortened or cancelled because of a closure, using consistent wording for the notification| **P10** | Should | Test: Close a room with three bookings and check that each booking holder receives a message stating the change |
+| **FR09** | The system shall show members whether a booking is confirmed or only being held provisionally | **P05**, **CQ02** | Must | Test: A member creates a provisional booking and a confirmed booking and checks that each displays its correct status |
+| **FR10** | The system shall refuse a combined room and equipment booking if the equipment is not available at the same time as the room, while leaving the room bookable on its own | **P06** | Must | Test: A member attempts to book a free room with equipment that is reserved elsewhere and the combined booking is refused with a reason |
+| **FR11** | The system shall prevent conflicting reservations of the same resource for overlapping times | **P01** | Must | Test: Two members attempt to book the same desk for overlapping times and the second booking should be rejected |
+| **FR12** | The system shall allow organisation administrators to change or remove individual dates of a recurring booking so old dates do not remain in the calendar | **P09** | Must | Test: Organisation administrator removes a holiday date from a recurring booking and checks the resource shows as available on that date |

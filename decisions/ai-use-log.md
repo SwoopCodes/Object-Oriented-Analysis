@@ -31,3 +31,12 @@ AI tool: Claude (Anthropic), Level 3 use as per the CA1 brief.
 | Naming the system "Workspace Reservation & Access System" could blur the boundary with the external access system, which is out of scope. | Renamed the system to *'Workspace Management System'* as it suits the idea of the system a lot better |
 | My assumption about syncing offline bookings described how the solution would work rather than something to verify. | Dropped it from assumptions. The internet failure need is covered by the constraint, which becomes an NFR later |
 | Stakeholder table says organisations "pay for memberships", which the scenario doesn't state. | Removed line about paying for emberships in the stakeholder analysis and added a clarification question|
+
+**19/10/2026 - Review of requirements catalogue**
+
+| Suggestion | Decision |
+|------------|----------|
+| FR02 "update booking" was too vague and "receptionist/staff" was not one role. | Changed it to just be reception staff to keep the requirement accurate |
+| FR05 had the wrong source (P10 instead of P11), said "charge members" while CQ09 is still open, and used accounting staff as the tester even though they don't use the system directly. | Kept the reference to CQ09 since it isn't fully answered and using such wording makes it seem like an assumption |
+| FR07's test assumed facilities staff can't see bookings, which is a policy the scenario doesn't confirm (CQ07). | Referenced CQ07 in references and in the test column |
+| The Type column repeated "Functional" on every row, which the "Functional Requirements" heading already says. | Kept. Removed the Type column from the functional requirements table|
