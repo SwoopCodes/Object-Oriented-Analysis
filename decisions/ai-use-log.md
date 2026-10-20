@@ -45,7 +45,14 @@ AI tool: Claude (Anthropic), Level 3 use as per the CA1 brief.
 
 | Suggestion | Decision |
 |------------|----------|
-| My first NFRs ("reliable", "accurate") weren't measurable. AI suggested stating which functions, thresholds and conditions, as in Lecture 3's examples. | |
+| My first NFRs ("reliable", "accurate") weren't measurable. AI suggested stating which functions, thresholds and conditions, as in Lecture 3's examples. | Followed Ai suggestion my previous NFRs were considered more like FRs instead|
 | AI pointed out that two of my NFRs (one booking per resource, usage beyond plan limits) were really functional requirements, and that one duplicated FR11. | Revised the requirements and added new ones based off of the assumptions inside of the purpose scope boundary |
 | Numbers in my NFRs (response time & check-in time) aren't in the scenario, so AI suggested recording them as assumptions instead of presenting them as confirmed. | Added assumptions for response time and check-in time |
 | AI pointed out that usage data goes to the accounting system, not accounting staff, because accounting personnel are offstage in my stakeholder analysis. | renamed to 'accounting system' as it keeps it in-line with the scenario|
+
+**20/10/2026 - Business rules and risks**
+
+| Suggestion | Decision |
+|------------|----------|
+| AI suggested adding only rules the scenario states (extensions, orientation, plan contents, visitor/guest information, equipment with rooms) and keeping unstated policies as CQs. | Added BR03 to BR07 with the scenario source for each |
+| AI suggested risks drawn from assumptions, open CQs and the access and accounting dependencies. | Added R01 to R05 with responses and added BR and R to the README identifiers |
