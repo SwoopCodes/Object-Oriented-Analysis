@@ -12,6 +12,7 @@
 - **CQ09** Should the system work out charge amounts, or only record usage for the accounting system?
 - **CQ10** Is a visitor (who books a resource) the same as a guest (who comes in with a member)?
 - **CQ11** Do organisations pay for a membership the same as a member does?
+- **CQ12** Can a member who has not had the required orientation still book a room or equipment that needs it, and who records that orientation?
 
 **Business rules:**
 - **BR01** Members must not see other organisations' activity.
