@@ -1,0 +1,39 @@
+@startuml
+left to right direction
+
+actor "Member" as Member
+actor "Reception staff" as Reception
+actor "Organisation administrator" as OrgAdmin
+actor "Temporary cover staff" as CoverStaff
+actor "Facilities staff" as Facilities
+actor "Workspace manager" as Manager
+actor "Access system" as AccessSystem <<system>>
+actor "Accounting system" as AccountingSystem <<system>>
+
+rectangle "Workspace Management System" {
+  usecase "Make Booking" as UC01
+  usecase "View Room Information" as UC02
+  usecase "Move Booking" as UC03
+  usecase "Change Recurring Booking Dates" as UC04
+  usecase "Check In Member" as UC05
+  usecase "Set Equipment Status" as UC06
+  usecase "Log Fault" as UC07
+  usecase "Close Resource" as UC08
+  usecase "Send Usage Records" as UC09
+}
+
+Member --> UC01
+Member --> UC02
+Reception --> UC02
+Reception --> UC03
+Reception --> UC05
+OrgAdmin --> UC04
+CoverStaff --> UC05
+Facilities --> UC06
+Facilities --> UC07
+Manager --> UC08
+Manager --> UC09
+
+UC05 --> AccessSystem
+UC09 --> AccountingSystem
+@enduml
