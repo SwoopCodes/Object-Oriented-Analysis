@@ -56,3 +56,11 @@ AI tool: Claude (Anthropic), Level 3 use as per the CA1 brief.
 |------------|----------|
 | AI suggested adding only rules the scenario states (extensions, orientation, plan contents, visitor/guest information, equipment with rooms) and keeping unstated policies as CQs. | Added BR03 to BR07 with the scenario source for each |
 | AI suggested risks drawn from assumptions, open CQs and the access and accounting dependencies. | Added R01 to R05 with responses and added BR and R to the README identifiers |
+
+**20/10/2026 - User stories**
+
+| Suggestion | Decision |
+|------------|----------|
+| AI suggested six stories, each for a different actor and based on a Must FR (FR09, FR11, FR10, FR06, FR12, FR07), so the backlog covers the main roles. | Added US01 to US06 to requirements/user-stories.md with the same priority as their FR |
+| AI suggested building acceptance criteria by splitting each FR's verification test, with at least one refusal criterion per story. | Wrote 3 to 4 criteria per story with no screens or technology |
+| AI suggested referencing CQs where a criterion would need an unstated policy (hold period, hidden fields, partial use) instead of deciding it. | Listed CQ02, CQ06, CQ07 and CQ08 in each story's questions field instead of writing criteria for them, and did not add new rules |
