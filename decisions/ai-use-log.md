@@ -69,7 +69,14 @@ AI tool: Claude (Anthropic), Level 3 use as per the CA1 brief.
 
 | Suggestion | Decision |
 |------------|----------|
-| AI pointed out that FR13 (usage beyond plan allowance) was linked to UC05 Check In Member, which it has nothing to do with, and that UC09 Send Usage Records should also link FR05. | Ignored|
+| AI pointed out that FR13 (usage beyond plan allowance) was linked to UC05 Check In Member, which it has nothing to do with, and that UC09 Send Usage Records should also link FR05. | added FR05 to UC09 |
 | AI pointed out that the scenario does not say who closes a resource (UC08) or who sends usage records (UC09), so the primary actor for each is an assumption, and UC09 may not have a person starting it at all. | Ignored |
 | AI compared the catalogue with my actor-goal table and found goals with no use case: member change/cancel, the manager's occupancy view, and visitor access. | Ignored |
 | AI suggested adding a sentence under the catalogue stating which actor goals are not modelled in this release, so the gaps read as a scope decision rather than an oversight. | Ignored |
+
+**20/10/2026 - Review of Gherkin scenarios**
+
+| Suggestion | Decision |
+|------------|----------|
+| AI pointed out that my scenarios were written as Markdown (.md) files, but the brief asks for .feature files. AI converted them to Gherkin syntax (Feature, Rule, Scenario, Scenario Outline, tags), as formatting only with no wording changed, and checked them with a Gherkin parser. | Changed it to .feature files as per assignment brief |
+| AI pointed out that my tags were inconsistent (some had @, some didn't) and moved them onto their own line above each scenario. | Kept the change. Consistent formatting is important |
