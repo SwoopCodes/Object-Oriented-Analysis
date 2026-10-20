@@ -64,3 +64,12 @@ AI tool: Claude (Anthropic), Level 3 use as per the CA1 brief.
 | AI suggested six stories, each for a different actor and based on a Must FR (FR09, FR11, FR10, FR06, FR12, FR07), so the backlog covers the main roles. | Added US01 to US06 to requirements/user-stories.md with the same priority as their FR |
 | AI suggested building acceptance criteria by splitting each FR's verification test, with at least one refusal criterion per story. | Wrote 3 to 4 criteria per story with no screens or technology |
 | AI suggested referencing CQs where a criterion would need an unstated policy (hold period, hidden fields, partial use) instead of deciding it. | Listed CQ02, CQ06, CQ07 and CQ08 in each story's questions field instead of writing criteria for them, and did not add new rules |
+
+**20/10/2026 - use-case catalogue**
+
+| Suggestion | Decision |
+|------------|----------|
+| AI pointed out that FR13 (usage beyond plan allowance) was linked to UC05 Check In Member, which it has nothing to do with, and that UC09 Send Usage Records should also link FR05. | Ignored|
+| AI pointed out that the scenario does not say who closes a resource (UC08) or who sends usage records (UC09), so the primary actor for each is an assumption, and UC09 may not have a person starting it at all. | Ignored |
+| AI compared the catalogue with my actor-goal table and found goals with no use case: member change/cancel, the manager's occupancy view, and visitor access. | Ignored |
+| AI suggested adding a sentence under the catalogue stating which actor goals are not modelled in this release, so the gaps read as a scope decision rather than an oversight. | Ignored |

@@ -11,7 +11,7 @@ Stories give the stakeholder-value view of selected Must requirements. Use case 
 | | |
 | --- | --- |
 | **Business value** | Members can plan around bookings they can rely on (member goal: know for sure if their spot is locked in) |
-| **Related** | **FR09**, UC (added later) |
+| **Related** | **FR09**, **UC01** |
 | **Priority** | Must |
 | **Gherkin** | Added later |
 | **Questions / assumptions** | **CQ02** |
@@ -30,7 +30,7 @@ Stories give the stakeholder-value view of selected Must requirements. Use case 
 | | |
 | --- | --- |
 | **Business value** | Fewer conflicting reservations, which is the main reason for replacing the spreadsheets |
-| **Related** | **FR11**, **FR02**, UC (added later) |
+| **Related** | **FR11**, **FR02**, **UC01**, **UC03** |
 | **Priority** | Must |
 | **Gherkin** | Added later |
 | **Questions / assumptions** | **CQ08** |
@@ -50,7 +50,7 @@ Stories give the stakeholder-value view of selected Must requirements. Use case 
 | | |
 | --- | --- |
 | **Business value** | "A free room is not useful if the equipment the member requested is unavailable" |
-| **Related** | **FR10**, **FR04**, UC (added later) |
+| **Related** | **FR10**, **FR04**, **UC01**, **UC06** |
 | **Priority** | Must |
 | **Gherkin** | Added later |
 | **Questions / assumptions** | None |
@@ -71,7 +71,7 @@ Stories give the stakeholder-value view of selected Must requirements. Use case 
 | | |
 | --- | --- |
 | **Business value** | "A fault may limit a room without making the whole room unusable" |
-| **Related** | **FR06**, UC (added later) |
+| **Related** | **FR06**, **UC07** |
 | **Priority** | Must |
 | **Gherkin** | Added later |
 | **Questions / assumptions** | **CQ06** |
@@ -91,7 +91,7 @@ Stories give the stakeholder-value view of selected Must requirements. Use case 
 | | |
 | --- | --- |
 | **Business value** | "Our recurring booking changes during holidays, but old dates remain in the calendar" |
-| **Related** | **FR12**, **FR01**, UC (added later) |
+| **Related** | **FR12**, **FR01**, **UC04** |
 | **Priority** | Must |
 | **Gherkin** | Added later |
 | **Questions / assumptions** | **CQ02** |
@@ -110,7 +110,7 @@ Stories give the stakeholder-value view of selected Must requirements. Use case 
 | | |
 | --- | --- |
 | **Business value** | "I need to handle arrivals without seeing every member's commercial information" |
-| **Related** | **FR07**, **BR02**, **NFR04**, UC (added later) |
+| **Related** | **FR07**, **BR02**, **NFR04**, **UC05** |
 | **Priority** | Must |
 | **Gherkin** | Added later |
 | **Questions / assumptions** | **CQ07**, **A07** |
