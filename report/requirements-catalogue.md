@@ -18,3 +18,15 @@
 | **FR10** | The system shall refuse a combined room and equipment booking if the equipment is not available at the same time as the room, while leaving the room bookable on its own | **P06** | Must | Test: A member attempts to book a free room with equipment that is reserved elsewhere and the combined booking is refused with a reason |
 | **FR11** | The system shall prevent conflicting reservations of the same resource for overlapping times | **P01** | Must | Test: Two members attempt to book the same desk for overlapping times and the second booking should be rejected |
 | **FR12** | The system shall allow organisation administrators to change or remove individual dates of a recurring booking so old dates do not remain in the calendar | **P09** | Must | Test: Organisation administrator removes a holiday date from a recurring booking and checks the resource shows as available on that date |
+| **FR13** | The system shall record usage of a resource that goes beyond a member's plan allowance | **P03**, **FR05** | Must | Test: Create a test member with a plan, make bookings and uses that exceed the plan limits and check that the excess usage appears in the usage record |
+
+---
+
+## Non-Functional Requirements
+
+| ID | Requirement | Source | MoSCoW | Verification |
+| --- | --- | --- | --- | --- |
+| **NFR01** | The system shall keep creating, viewing and changing bookings at the workspace during an internet outage, until the connection returns, without losing any booking | **Constraints (Purpose-scope-boundary.md)** | Must | Test: Disconnect the internet, create a booking as reception staff, view and change it, reconnect and restart the system. Pass if the booking is still present and matches what was entered |
+| **NFR02** | The system shall record usage information with no missing or duplicated entries, and with totals that match the source events (zero errors, see A05) | **P11**, **A03**, **A05**, **FR05** | Must | Test: Set up a known set of chargeable events, let the system record them and compare the record against the known set. Pass if no event is missing or duplicated and the totals match |
+| **NFR03** | The system shall show the availability of a resource within 2 seconds for at least 95% of requests (see A06) | **P01**, **P02**, **A06** | Should | Test: Request the availability of 100 resources during a normal working load and time each response. Pass if at least 95 return within 2 seconds |
+| **NFR04** | The system shall let temporary cover staff check in a member within 60 seconds after a five-minute walkthrough (see A07) | **Temporary cover staff (stakeholders.md)**, **A07** | Should | Test: Five people unfamiliar with the system receive the walkthrough, then each checks in a known member while being timed. Pass if all five finish within 60 seconds |

@@ -40,3 +40,12 @@ AI tool: Claude (Anthropic), Level 3 use as per the CA1 brief.
 | FR05 had the wrong source (P10 instead of P11), said "charge members" while CQ09 is still open, and used accounting staff as the tester even though they don't use the system directly. | Kept the reference to CQ09 since it isn't fully answered and using such wording makes it seem like an assumption |
 | FR07's test assumed facilities staff can't see bookings, which is a policy the scenario doesn't confirm (CQ07). | Referenced CQ07 in references and in the test column |
 | The Type column repeated "Functional" on every row, which the "Functional Requirements" heading already says. | Kept. Removed the Type column from the functional requirements table|
+
+**20/10/2026 - Review of non-functional requirements**
+
+| Suggestion | Decision |
+|------------|----------|
+| My first NFRs ("reliable", "accurate") weren't measurable. AI suggested stating which functions, thresholds and conditions, as in Lecture 3's examples. | |
+| AI pointed out that two of my NFRs (one booking per resource, usage beyond plan limits) were really functional requirements, and that one duplicated FR11. | Revised the requirements and added new ones based off of the assumptions inside of the purpose scope boundary |
+| Numbers in my NFRs (response time & check-in time) aren't in the scenario, so AI suggested recording them as assumptions instead of presenting them as confirmed. | Added assumptions for response time and check-in time |
+| AI pointed out that usage data goes to the accounting system, not accounting staff, because accounting personnel are offstage in my stakeholder analysis. | renamed to 'accounting system' as it keeps it in-line with the scenario|
