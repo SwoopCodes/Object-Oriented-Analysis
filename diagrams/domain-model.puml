@@ -1,2 +1,75 @@
 @startuml
+hide circle
+hide empty methods
+
+class Member {
+  memberNumber
+  name
+}
+
+class Membership {
+  status
+}
+
+class Plan {
+  name
+  deskHours
+  guestPrivileges
+}
+
+class Visitor {
+  name
+}
+
+class Booking {
+  status
+  pattern
+}
+
+class "Booking date" as BookingDate {
+  date
+  startTime
+  endTime
+}
+
+class Resource {
+  name
+  kind
+  status
+}
+
+class Room {
+  capacity
+  layout
+  accessibility
+}
+
+class Fault {
+  description
+  limitation
+}
+
+class "Check-in" as CheckIn {
+  arrivalTime
+}
+
+class "Usage record" as UsageRecord {
+  excessUsage
+}
+
+Member "1" -right- "0..*" Membership : holds >
+Membership "0..*" -right- "1" Plan : is under >
+
+Member "0..1" -down- "0..*" Booking : makes >
+Visitor "0..1" -down- "0..*" Booking : makes >
+Booking "1" -right- "1..*" BookingDate : is scheduled on >
+Booking "0..*" -down- "1..*" Resource : reserves >
+Booking "0..1" -left- "0..*" CheckIn : is for >
+
+Resource <|-down- Room
+Fault "0..*" -left- "0..*" Resource : affects >
+
+CheckIn "0..1" -down- "0..*" UsageRecord : records use from >
+Booking "0..1" -down- "0..*" UsageRecord : records use from >
+
 @enduml
