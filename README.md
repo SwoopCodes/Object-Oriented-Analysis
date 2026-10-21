@@ -11,6 +11,6 @@
 - UC = use case
 - SC = Gherkin scenario
 - NFR = Non-Functional Requirement
-- FR = Functional Requirment
+- FR = Functional Requirement
 
 More prefixes will be added for requirements, rules, use cases and scenarios.

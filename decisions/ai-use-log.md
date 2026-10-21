@@ -80,3 +80,17 @@ AI tool: Claude (Anthropic), Level 3 use as per the CA1 brief.
 |------------|----------|
 | AI pointed out that my scenarios were written as Markdown (.md) files, but the brief asks for .feature files. AI converted them to Gherkin syntax (Feature, Rule, Scenario, Scenario Outline, tags), as formatting only with no wording changed, and checked them with a Gherkin parser. | Changed it to .feature files as per assignment brief |
 | AI pointed out that my tags were inconsistent (some had @, some didn't) and moved them onto their own line above each scenario. | Kept the change. Consistent formatting is important |
+
+**21/10/2026 - Review of candidate-concept analysis**
+
+| Suggestion | Decision |
+|------------|----------|
+| Visitor row cited FR05 for visitor charges, but FR05 only covers recording usage for bookings and check-ins. | Kept suggestion.. Replaced it with the scenario's Charges section as the source |
+| Relocated and shortened are things that happen to a booking because of a closure (FR08), not statuses. | Kept. Booking status is now confirmed, provisional and cancelled only. Added a separate row for relocated/shortened as events covered by Closure |
+| No-show was classified as an operation/event but converted to an attribute. | Changed the classification to attribute/value (outcome of a booking) so it matches the decision |
+| Capacity, layout and accessibility were put on Resource but are only facts about a room, so Room may need to stay distinct. | Kept suggestion.. Room is now kept as a kind of Resource and the three attributes moved to Room. Desk and Equipment stay merged into Resource. I will confirm the generalisation with the is-a test in the domain model |
+| Equipment status (FR04) and Fault (FR06) both mean a resource can't be used. | Added to the reasons that "under repair" is the effect of a fault and the Fault is the record of what went wrong. Whether staff can set the status without a fault isn't stated in the scenario so I left it unanswered |
+| FR12 changes one date of a recurring booking and keeps the rest, which suggests the date is its own concept and not part of Booking. | Kept suggestion.. Recurring date is now kept as "Booking date" and added to the glossary. I may still argue it as part of Booking in the domain model |
+| Orientation's reason said it has a date and a person who records it, which the scenario doesn't say. | Kept. Reworded the reason to what BR04 says and noted that orientation might be a link between a member and a resource. CQ12 remains open |
+| Organisation administrators were removed as actors, but the system has to know which organisation they belong to. | Added a sentence that this is handled by the Member-Organisation link plus a role and not a separate class |
+| Glossary: Booking used "reservation" which I merged into Booking, and Organisation's definition was the rule BR01. | Rewrote both definitions to say what the thing is. Glossary is now 14 concepts |
