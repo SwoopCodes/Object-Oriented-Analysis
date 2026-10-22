@@ -55,23 +55,23 @@
 
 **Extensions**
 - **2a.** *(Recoverable exception)* The resource has a recorded fault that limits it.
-  1. System shows the member the limitation that was recorded.
-  2. Whether a limited resource can still be booked is not decided here (CQ06). Where it can, the use case resumes at step 3; where it cannot, the member picks something else and the use case resumes at step 1.
+1. System shows the member the limitation that was recorded.
+2. Whether a limited resource can still be booked is not decided here (CQ06). Where it can, the use case resumes at step 3; where it cannot, the member picks something else and the use case resumes at step 1.
 - **2b.** *(Recoverable exception)* The resource needs additional orientation (BR04).
-  1. System tells the member the resource needs orientation.
-  2. Whether the member may still book it is not decided here (CQ12). The use case continues or returns to step 1 depending on that answer.
+1. System tells the member the resource needs orientation.
+2. Whether the member may still book it is not decided here (CQ12). The use case continues or returns to step 1 depending on that answer.
 - **3a.** *(Cancellation)* The member gives up before asking to book.
-  1. Nothing is recorded.
-  2. Use case ends.
+1. Nothing is recorded.
+2. Use case ends.
 - **4a.** *(Recoverable exception)* Another booking overlaps the resource for that period.
-  1. System refuses the booking and tells the member the resource is not available then.
-  2. Member picks another time or resource, and the use case resumes at step 1. If they give up, the use case ends with nothing recorded.
+1. System refuses the booking and tells the member the resource is not available then.
+2. Member picks another time or resource, and the use case resumes at step 1. If they give up, the use case ends with nothing recorded.
 - **4b.** *(Failure)* The member is extending an existing booking and the extra time runs into a later confirmed booking (BR03).
-  1. System leaves the later booking unchanged and refuses the extra time.
-  2. The member's original booking stays as it was. Use case ends.
+1. System leaves the later booking unchanged and refuses the extra time.
+2. The member's original booking stays as it was. Use case ends.
 - **5a.** *(Alternative success)* The room is free but the equipment is not available at that time (FR10).
-  1. System refuses the combined booking and gives the reason.
-  2. The room stays bookable on its own. If the member wants the room alone, the use case resumes at step 6 for the room only. If they want other equipment or another time, it resumes at step 1. If they give up, it ends with nothing recorded.
+1. System refuses the combined booking and gives the reason.
+2. The room stays bookable on its own. If the member wants the room alone, the use case resumes at step 6 for the room only. If they want other equipment or another time, it resumes at step 1. If they give up, it ends with nothing recorded.
 
 **Special requirements**
 - Availability is shown within 2 seconds for at least 95% of requests (NFR03, A06).

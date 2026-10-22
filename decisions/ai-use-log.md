@@ -85,9 +85,9 @@ AI tool: Claude (Anthropic), Level 3 use as per the CA1 brief.
 
 | Suggestion | Decision |
 |------------|----------|
-| AI pointed out a wrong evidence link: Visitor cited "FR05 (visitor charges)", but FR05 is about recording usage for bookings and check-ins, not visitors. | |
-| AI pointed out that "relocated" and "shortened" are things that happen to a booking because of a closure, not booking statuses like confirmed, provisional or cancelled. | |
-| AI pointed out that capacity, layout and accessibility were made attributes of Resource, while my own reason said they describe rooms, which suggests Room may need to stay distinct as a kind of Resource. | |
-| AI pointed out an overlap between equipment status (FR04) and Fault (FR06), since both can mean a resource can't be used, and suggested stating how they relate. | |
-| AI pointed out that my reason for keeping Orientation mentioned a date and a person who records it, which the scenario doesn't state, and asked whether orientation is a thing or a link between a member and a resource. | |
-| AI pointed out that the glossary definitions of Booking and Organisation used a merged synonym ("reservation") and a business rule (BR01) instead of saying what each concept is. | |
+| AI pointed out a wrong evidence link: Visitor cited "FR05 (visitor charges)", but FR05 is about recording usage for bookings and check-ins, not visitors. | Kept. FR05 has nothing to do with visitors, so I removed it from the Visitor evidence and pointed it at the scenario's charges section instead |
+| AI pointed out that "relocated" and "shortened" are things that happen to a booking because of a closure, not booking statuses like confirmed, provisional or cancelled. | Kept. A closure happens to a booking, it isn't a state the booking sits in. |
+| AI pointed out that capacity, layout and accessibility were made attributes of Resource, while my own reason said they describe rooms, which suggests Room may need to stay distinct as a kind of Resource. | Kept. Capacity, layout and accessibility only describe rooms, so Room stays as its own kind of Resource and the attributes moved to Room. Desk and equipment stay merged into Resource |
+| AI pointed out an overlap between equipment status (FR04) and Fault (FR06), since both can mean a resource can't be used, and suggested stating how they relate. | Kept. Treated 'under repair' as the effect of a fault, so Fault is the record of what went wrong and the status is the result. |
+| AI pointed out that my reason for keeping Orientation mentioned a date and a person who records it, which the scenario doesn't state, and asked whether orientation is a thing or a link between a member and a resource. | Kept. The scenario never says a date or who records orientation, so I removed both.|
+| AI pointed out that the glossary definitions of Booking and Organisation used a merged synonym ("reservation") and a business rule (BR01) instead of saying what each concept is. | Kept. The Booking and Organisation definitions now say what each one is.|
