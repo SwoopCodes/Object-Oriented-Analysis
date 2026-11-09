@@ -32,14 +32,14 @@ We were mainly focused on a smooth workflow between the board and the repository
 
 ## Consequences
 
-[What this means for the group, e.g. what evidence gets submitted and how the board links to the repo.]
+The board will sit in the same repository where the actual project files are kept. By doing this method, the workflow from board to project is grossly simplified and easier to navigate and manage.
 
 ## Lecturer reply
 
 **Date sent:** 04/11/2026
 **Date of reply:** 04/11/2026
 
-[Paste the reply here, or link a screenshot. Write "awaiting reply" until it arrives.]
+Group and scenario has been approved by Andrew Shields
 
 ## Approved by
 
