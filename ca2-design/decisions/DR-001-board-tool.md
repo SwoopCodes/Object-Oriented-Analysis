@@ -48,4 +48,4 @@ We were mainly focused on a smooth workflow between the board and the repository
 | Eron | 04/11/2026 |
 | Patryk | 04/11/2026 |
 | Albin | 04/11/2026 |
-| Elisha | DD/MM/YYYY |
+| Elisha | 09/11/2026 |
