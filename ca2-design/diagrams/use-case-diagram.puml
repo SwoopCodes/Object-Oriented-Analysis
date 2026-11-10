@@ -1,0 +1,43 @@
+@startuml
+!pragma layout smetana
+left to right direction
+
+actor "Member" as Member
+actor "Reception staff" as Reception
+actor "Organisation administrator" as OrgAdmin
+actor "Temporary cover staff" as CoverStaff
+actor "Facilities staff" as Facilities
+actor "Workspace manager" as Manager
+actor "Access system" as AccessSystem <<system>>
+actor "Accounting system" as AccountingSystem <<system>>
+
+rectangle "Workspace Management System" {
+  usecase "UC01 Make Booking" as UC01 #LightBlue
+  usecase "UC02 View Room Information" as UC02
+  usecase "UC03 Move Booking" as UC03
+  usecase "UC04 Change Recurring Booking Dates" as UC04
+  usecase "UC05 Check In Member" as UC05 #LightBlue
+  usecase "UC06 Set Equipment Status" as UC06
+  usecase "UC07 Log Fault" as UC07
+  usecase "UC08 Close Resource" as UC08
+  usecase "UC09 Send Usage Records" as UC09
+}
+
+Member --> UC01
+Member --> UC02
+Reception --> UC02
+Reception --> UC03
+Reception --> UC05
+OrgAdmin --> UC04
+CoverStaff --> UC05
+Facilities --> UC06
+Facilities --> UC07
+Manager --> UC08
+Manager --> UC09
+
+UC05 --> AccessSystem
+UC09 --> AccountingSystem
+legend bottom
+UC01 and UC05 are covered in depth in CA2.
+endlegend
+@enduml
