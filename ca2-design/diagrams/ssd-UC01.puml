@@ -1,0 +1,23 @@
+@startuml ssd-UC01
+title SSD - UC01 Make Booking
+actor Member
+participant ":System" as S
+
+Member -> S : checkAvailability(resourceIds, date, startTime, endTime)
+S --> Member : response showing slot is available
+opt Resource has a recorded fault (2a)
+S --> Member : Resource has a recorded fault
+note right : CQ06
+end
+Member -> S : makeBooking(memberNumber, resourceIds, date, startTime, endTime, bookingType)
+alt No overlap and equipment free
+S --> Member : Booking recorded for resources and period with status (Confirmed / Provisional)
+else Resource already booked (4a)
+S --> Member : Unable to book. Resource booked by another member
+else Equipment unavailable (5a)
+S --> Member : Unable to book with requested resource
+end
+note over Member, S
+  SC01 = success, SC02 = 4a, SC03 = 5a
+end note
+@enduml 
