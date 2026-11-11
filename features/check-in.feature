@@ -7,3 +7,5 @@ Feature: Check in a member
     When Sam checks in member M-104 on arrival
     Then member M-104 is recorded as arrived
     And Sam is not shown the plan, allowance or charge details of member M-104
+
+

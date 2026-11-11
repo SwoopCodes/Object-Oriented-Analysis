@@ -1,0 +1,26 @@
+@startuml ssd-UC05
+
+title SSD - UC05 Check In Member
+hide footbox
+actor "Reception staff" as Staff
+participant ":System" as S
+actor "Access system" as Access
+
+note over Staff : temporary cover staff use the same event\nbut don't see plan, allowance or charge details (BR02)
+
+Staff -> S : checkInMember(memberNumber)
+
+alt booking found for today
+  S --> Staff : arrival recorded (booking, arrival time)
+else no booking for today
+  S --> Staff : no booking for today
+  note right : not decided - CQ08
+else member number not found
+  S --> Staff : member number not found
+end
+
+note over S, Access : what the system sends to the Access system is not confirmed
+
+note over Staff, Access : SC05 = success path, as temporary cover staff
+
+@enduml
