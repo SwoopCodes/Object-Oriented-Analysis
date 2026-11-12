@@ -1,3 +1,5 @@
+# AI use log - Eron Baftjari
+
 ## crc-UCO1
 | Date | Task | What I did | What AI did | Outcome |
 |------|------|------------|----------------------|---------|
@@ -12,3 +14,13 @@
 | Date | Task | What I did | What AI  did | Outcome |
 |------|------|------------|----------------------|---------|
 | 11/11/2026 | SSD UC05 | Read card #32, asked how SSDs work, checked the diagram against UC05, BR02, CQ08 and Done when | Explained SSDs and pointed out Requirments i needed | Kept |
+
+## Class-Diagram-T14
+
+
+**Date: 12/11/2026**
+
+| Suggestion | Decision |
+|------------|----------|
+| The Class diagram That the Membership must have at least 1 plan | changed the relationships to its suited coat |
+| MakeBooking class has a workspace | Changed the relationship and recorded the change |
