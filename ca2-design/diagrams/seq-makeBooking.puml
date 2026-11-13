@@ -45,4 +45,5 @@ else all resources free
   B -> U : create()
   B --> C : UsageRecord
   C --> A : booking status (Confirmed or Provisional)
-end
+  end
+@enduml
