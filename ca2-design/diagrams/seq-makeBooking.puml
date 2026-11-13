@@ -1,0 +1,48 @@
+@startuml seq-makeBooking
+title makeBooking - UC01 steps 3-7
+actor Member as A
+participant ":BookingController" as C
+participant ":Workspace" as W
+participant "m : Member" as M
+participant ":Membership" as MS
+participant ":Plan" as P
+participant "r : Resource" as R
+
+A -> C : makeBooking(memberNumber, resourceIds, date, startTime, endTime, bookingType)
+C -> W : findMember(memberNumber)
+W --> C : m
+C -> M : hasActiveMembership()
+M -> MS : isActive()
+MS --> M : Boolean
+M --> C : Boolean
+
+loop for each resourceId
+  C -> W : findResource(resourceId)
+  W --> C : r
+  C -> R : isAvailable(date, startTime, endTime)
+  R --> C : Boolean
+end
+
+alt a resource is not free (4a, 5a)
+  C --> A : refused - not available
+else all resources free
+  C -> M : createBooking(resources, date, startTime, endTime, bookingType)
+  create "b : Booking" as B
+  M -> B : create(resources, bookingType)
+  B -> B : addDate(date, startTime, endTime)
+  create ":BookingDate" as BD
+  B -> BD : create(date, startTime, endTime)
+  M --> C : b
+  C -> B : recordUsage()
+  B -> M : isOverAllowance(hours)
+  M -> MS : getPlan()
+  MS --> M : plan
+  M -> P : isOverAllowance(hours)
+  P --> M : Boolean
+  note right of P : What happens when usage is over the allowance is still open (CQ01, CQ09).
+  M --> B : Boolean
+  create ":UsageRecord" as U
+  B -> U : create()
+  B --> C : UsageRecord
+  C --> A : booking status (Confirmed or Provisional)
+end
