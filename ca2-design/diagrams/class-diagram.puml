@@ -1,0 +1,96 @@
+@startuml
+
+class BookingController {
+  + checkAvailability(resourceIds : String[*], date : Date, startTime : Time, endTime : Time)
+  + makeBooking(memberNumber : String, resourceIds : String[*], date : Date, startTime : Time, endTime : Time, bookingType : String)
+}
+
+class CheckInController {
+  + checkInMember(memberNumber : String)
+}
+
+class Workspace {
+  + findMember(memberNumber : String) : Member
+  + findResource(resourceId : String) : Resource
+}
+
+class Member {
+  - memberNumber : String
+  - name : String
+  + hasActiveMembership() : Boolean
+  + createBooking(resources : Resource[*], date : Date, startTime : Time, endTime : Time, bookingType : String) : Booking
+  + findBookingFor(date : Date) : Booking
+  + isOverAllowance(hours : Integer) : Boolean
+}
+
+class Membership {
+  - status : String
+  + isActive() : Boolean
+  + getPlan() : Plan
+}
+
+class Plan {
+  - name : String
+  - deskHours : Integer
+  - guestPrivileges : String
+  + isOverAllowance(hours : Integer) : Boolean
+}
+
+class Booking {
+  - status : String
+  - pattern : String
+  + addDate(date : Date, startTime : Time, endTime : Time)
+  + recordUsage() : UsageRecord
+  + checkIn(arrivalTime : Time) : CheckIn
+}
+
+class BookingDate {
+  - date : Date
+  - startTime : Time
+  - endTime : Time
+}
+
+class Resource {
+  - name : String
+  - kind : String
+  - status : String
+  + isAvailable(date : Date, startTime : Time, endTime : Time) : Boolean
+  + getFaults() : Fault[*]
+}
+
+class Room {
+  - capacity : Integer
+  - layout : String
+  - accessibility : String
+}
+
+class Fault {
+  - description : String
+  - limitation : String
+}
+
+class CheckIn {
+  - arrivalTime : Time
+  + recordUsage() : UsageRecord
+}
+
+class UsageRecord {
+  - excessUsage : Integer
+}
+
+BookingController --> Workspace
+CheckInController --> Workspace
+Workspace "1" --> Member
+Workspace "1" --> "*" Resource
+Member "1" --> "0..*" Membership
+Membership "0..*" --> "1" Plan
+Member "0..1" <--> "0..*" Booking
+Booking "1" --> "1..*" BookingDate
+Booking "0..*" --> "1..*" Resource
+Booking "0..1" --> "0..*" CheckIn
+Booking "0..1" --> "0..*" UsageRecord
+CheckIn "0..1" --> "0..*" UsageRecord
+Resource "0..*" --> "0..*" Fault
+
+Resource <|-- Room
+@enduml
