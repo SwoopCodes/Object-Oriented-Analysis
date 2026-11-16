@@ -17,10 +17,21 @@
 
 ## Class-Diagram-T14
 
-
 **Date: 12/11/2026**
 
 | Suggestion | Decision |
 |------------|----------|
 | The Class diagram That the Membership must have at least 1 plan | changed the relationships to its suited coat |
 | MakeBooking class has a workspace | Changed the relationship and recorded the change |
+
+## GRASP-UC05 -T10
+
+**Date: 16/11/2026**
+
+| Suggestion | Decision |
+|------------|----------|
+| Why not Column for find member should be CheckInController since it doesnt hold members and workspace does | Took the suggestion and applied it |
+|Suggested I add how the 2 use Cases are different in explaining the reasoning of my Controller choice| I then added the explanation and got AI to check if my answer made sense |
+|Suggested i should add examples when explain Cohesion and Coupling|I took the Advice and added examples with the help of AI |
+
+
