@@ -1,0 +1,30 @@
+@startuml seq-checkInMember
+title checkInMember - UC05 Check In Member
+actor "Reception staff" as A
+participant ":CheckInController" as C
+participant ":Workspace" as W
+participant "m : Member" as M
+participant "b : Booking" as B
+
+note over A, C : temporary cover staff use the same flow but don't see commercial details (BR02).
+
+A -> C : checkInMember(memberNumber)
+C -> W : findMember(memberNumber)
+W --> C : m
+C -> M : findBookingFor(today)
+M --> C : b
+
+alt no booking found
+    C --> A : "no booking found"
+    note right : not decided - CQ08
+else booking found
+    C -> B : checkIn(arrivalTime)
+    create "c : CheckIn" as CI
+    B -> CI : create(arrivalTime)
+    B -> CI : recordUsage()
+    create ":UsageRecord" as U
+    CI -> U : create()
+    B --> C : c
+    C --> A : "arrival recorded"
+end
+@enduml
