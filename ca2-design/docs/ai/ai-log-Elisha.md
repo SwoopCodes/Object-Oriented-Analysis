@@ -16,3 +16,9 @@
 |------------|----------|
 | Keep each card short and list what it knows, what it does and which classes help. | Draft uses six cards and lists each UC05 operation once. |
 
+
+**17/11/2026 - Sequence diagram for checkAvailability (T11)**
+
+| Suggestion | Decision |
+|------------|----------|
+| Loop through each resource, find it through Workspace, then ask Resource for availability and faults. | Used the shared operation names, dashed returns and the CQ06 note. |

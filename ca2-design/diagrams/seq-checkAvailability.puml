@@ -1,0 +1,22 @@
+@startuml seq-checkAvailability
+title checkAvailability - UC01 steps 1-2
+actor Member as A
+participant ":BookingController" as C
+participant ":Workspace" as W
+participant "r : Resource" as R
+
+A -> C : checkAvailability(resourceIds, date, startTime, endTime)
+
+loop for each resourceId
+  C -> W : findResource(resourceId)
+  W --> C : r
+  C -> R : isAvailable(date, startTime, endTime)
+  R --> C : true/false
+  C -> R : getFaults()
+  R --> C : faults
+end
+
+note right of R : whether a resource with a fault can be booked is open (CQ06)
+
+C --> A : availability and any faults
+@enduml
