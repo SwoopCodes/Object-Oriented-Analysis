@@ -12,3 +12,11 @@
 | CQ06 was in both the message and the note. | Removed it from the message and kept the note |
 | The note linking SC01, SC02 and SC03 to the alt branches was missing. | Added the note before @enduml |
 | Check "booked by another member" in 4a against the UC01 wording. | wording in both the SSD and use-case model are correct |
+
+**13/11/2026 - Review of seq-makeBooking (UC01 steps 3-7)**
+
+| Ai Suggestion | Decision |
+|------------|----------|
+| Checked the draft. Every call is from the shared names table, Booking, BookingDate and UsageRecord creation is shown, the refusal path is in an alt block, there's no database lifeline and the controller doesn't check rules itself. Rendered it to confirm it compiles. | No changes needed from this. |
+| The CQ01/CQ09 note rendered below the alt box, away from the call it's about. Move it straight after `P --> M : Boolean`. | Kept suggestion.. Moved the note next to the isOverAllowance call |
+| No path shown for when hasActiveMembership() returns false. | Left it out |
