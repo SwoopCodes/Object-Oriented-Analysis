@@ -1,0 +1,38 @@
+@startuml package-diagram
+
+package "application" {
+  class BookingController
+  class CheckInController
+  class AvailabilityResult
+  class BookingResult
+  class CheckInResult
+}
+
+package "domain" {
+  class Workspace
+  class Member
+  class Membership
+  class Plan
+  class Booking
+  class BookingDate
+  class Resource
+  class Room
+  class Fault
+  class CheckIn
+  class UsageRecord
+  class ServicesFactory
+  interface IAccessSystemAdapter
+  interface IAccountingAdapter
+  class AccessSystemAdapter
+  class AccountingAdapter
+}
+
+package "persistence" {
+  interface IPersistenceFacade
+  class PersistenceFacade
+}
+
+application .down.> domain
+application .down.> persistence
+domain .down.> persistence
+@enduml
