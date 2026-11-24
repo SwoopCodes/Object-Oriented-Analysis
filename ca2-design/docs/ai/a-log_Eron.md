@@ -40,6 +40,7 @@
 
 | Suggestion | Decision |
 |------------|----------|
-|  | Took the suggestion and applied it |
+| Remove the Accounting interface | Kept it, because card step 8 asks for it |
+|Suggest i add  IPersistenceFacade | Decided to go ahead with it and write it and use it  |
 
 

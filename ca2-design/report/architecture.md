@@ -35,7 +35,6 @@ Each controller operation returns a result with success, errorCode and message. 
 | Code | When | Operation | Contract / extension |
 |---|---|---|---|
 | MEMBER_NOT_FOUND | Member number doesn't exist | makeBooking, checkInMember | C01, C02, UC05 2a |
-| MEMBERSHIP_NOT_ACTIVE | Membership isn't active | makeBooking | C01, CQ03 |
 | RESOURCE_NOT_FOUND | Resource id doesn't exist | checkAvailability, makeBooking | Sequence diagrams |
 | RESOURCE_HAS_FAULT | Resource has a fault | checkAvailability | UC01 2a, CQ06 |
 | ORIENTATION_REQUIRED | Resource needs orientation | checkAvailability | UC01 2b, BR04, CQ12 |
