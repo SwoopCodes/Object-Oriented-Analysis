@@ -22,3 +22,11 @@
 | Suggestion | Decision |
 |------------|----------|
 | Loop through each resource, find it through Workspace, then ask Resource for availability and faults. | Used the shared operation names, dashed returns and the CQ06 note. |
+
+**24/11/2026 - Selected CA2 design scope (T18)**
+
+| Suggestion | Decision |
+|------------|----------|
+| Take the value, priorities and rule IDs from the existing stories and use cases, following Session 14. | Used these in the scope table and added source links. |
+| Include the operation and scenario counts, and explain why the other use cases were left out. | Added the counts and short reasons for group review. |
+| UC01 records usage but its Related row omits FR05. The third-use-case instruction also has no question. | Added both points to the scope check. |
