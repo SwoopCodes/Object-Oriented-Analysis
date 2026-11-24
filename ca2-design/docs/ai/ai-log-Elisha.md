@@ -22,3 +22,10 @@
 | Suggestion | Decision |
 |------------|----------|
 | Loop through each resource, find it through Workspace, then ask Resource for availability and faults. | Used the shared operation names, dashed returns and the CQ06 note. |
+
+**24/11/2026 - Design evaluation (T21)**
+
+| Suggestion | Decision |
+|------------|----------|
+| Count operations and directed links from the class diagram, then compare C01 and C02 with the sequence diagrams. | Added the counts and named the files where creation, failure paths and links need clarification. |
+| Link assumptions to CQs and use the GRASP records for rejected alternatives. T20 and issue #68 are still open. | Kept the open questions visible and marked coupling for review after T20. |
