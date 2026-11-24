@@ -137,4 +137,17 @@ class AccountingAdapter
 PersistenceFacade ..|> IPersistenceFacade
 AccessSystemAdapter ..|> IAccessSystemAdapter
 AccountingAdapter ..|> IAccountingAdapter
+
+' ---- T20: who returns / uses what ----
+' controllers make these results and hand them back
+BookingController ..> AvailabilityResult : returns
+BookingController ..> BookingResult : returns
+CheckInController ..> CheckInResult : returns
+
+' who uses each interface (architecture.md section 2)
+Workspace ..> IPersistenceFacade : get
+BookingController ..> IPersistenceFacade : put
+CheckInController ..> IPersistenceFacade : put
+CheckInController ..> IAccessSystemAdapter : after CQ13
+
 @enduml
