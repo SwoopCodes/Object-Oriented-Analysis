@@ -41,7 +41,7 @@ Every controller operation gets a return type on the class diagram. A new failur
 
 | Member | Date |
 |--------|------|
-| Eron | DD/MM/YYYY |
-| Patryk | DD/MM/YYYY |
-| Albin | DD/MM/YYYY |
-| Elisha | DD/MM/YYYY |
+| Eron | 25/11/2026 |
+| Patryk | 25/11/2026|
+| Albin | 25/11/2026 |
+| Elisha | 25/11/2026 |
