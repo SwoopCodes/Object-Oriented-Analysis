@@ -23,7 +23,7 @@
 | knows its member number and name | |
 | checks if it has an active membership (hasActiveMembership) | Membership |
 | creates a Booking (createBooking) | Booking |
-| checks if hours go over its plan allowance (isOverAllowance) | Membership, Plan |
+| checks if hours go over its plan allowance (isOverAllowance) | Membership |
 
 ### Membership
 
@@ -31,7 +31,7 @@
 |---|---|
 | knows its status | |
 | says if it is active (isActive) | |
-| gives its plan (getPlan) | Plan |
+| checks if hours go over its plan's allowance (isOverAllowance) | Plan |
 
 ### Plan
 
