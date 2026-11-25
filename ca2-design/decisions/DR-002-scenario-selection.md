@@ -28,7 +28,7 @@ The work also splits cleanly into two slices: UC01 Make Booking and UC05 Check I
 |--------|-------------------|
 | Scenario 16: Engineering Workshop Job Coordination Service (Eron) | [Eron to add] |
 | Scenario 12: Holiday Cottage Turnaround Service (Albin) | [Albin to add] |
-| Scenario 15: Business Training and Mentoring Service (Elisha) | [Elisha to add] |
+| Scenario 15: Business Training and Mentoring Service (Elisha) | Proposed rationale: it offers rich behaviour, but spans courses, mentoring, reviews and partner sharing, with eligibility and matching policies still open. Scenario 13 already has a developed analysis and concrete booking examples that support the selected design. |
 
 ## Consequences
 

@@ -9,7 +9,7 @@ Each member worked on a different scenario in CA1. The table lists all four.
 | Patryk | Scenario 13: Small Business Shared Workspace Service (Tralee Enterprise Workspace) | 9 use cases, with UC01 Make Booking and UC05 Check In Member written in full. An 11-class domain model where Room is a kind of Resource and BookingDate is its own class. |
 | Eron | Scenario 16: Engineering Workshop Job Coordination Service (Munster Engineering Workshop) | [member to add] |
 | Albin | Scenario 12: Holiday Cottage Turnaround Service (Dingle Peninsula Property Care) | [member to add] |
-| Elisha | Scenario 15: Business Training and Mentoring Service (Kerry Enterprise Development Network) | [member to add] |
+| Elisha | Scenario 15: Business Training and Mentoring Service (Kerry Enterprise Development Network) | Proposed from the scenario evidence: distinguish requests from allocations, retain earlier decisions when arrangements change, and restrict information by role. Elisha’s CA1 analysis is not included on this branch for comparison. |
 
 ## 2 Suitability matrix
 
@@ -27,11 +27,22 @@ Each member scores their own scenario from 1 (poor) to 5 (very good) in each col
 | 13 Small Business Shared Workspace (Patryk) | 4 | 5 | 5 | 5 | 4 | 4 | 27 |
 | 16 Engineering Workshop Job Coordination (Eron) | | | | | | | |
 | 12 Holiday Cottage Turnaround (Albin) | | | | | | | |
-| 15 Business Training and Mentoring (Elisha) | | | | | | | |
+| 15 Business Training and Mentoring (Elisha) | 3 | 5 | 4 | 4 | 3 | 4 | 23 |
 
-Scores agreed on 04/11/2026.
+Scores are proposed for group agreement. Elisha’s Scenario 15 scores were added on 25/11/2026.
 
 *Note: the Scenario 13 scores are a suggestion. The group still needs to agree them. Each member adds the scores for their own scenario.*
+
+**Elisha — Scenario 15 score rationale (25/11/2026)**
+
+- **Scope 3:** courses, mentoring, reviews and partner reporting create a broad coordination scope.
+- **Behavioural richness 5:** incomplete requests, provisional allocations, changes, withdrawal and reviews provide varied states and exceptions.
+- **OO potential 4:** Participant, Request, Event, Mentor, Allocation, Review and Action are candidate concepts to refine.
+- **Sliceability 4:** event registration or mentoring allocation could form a focused design, although matching depends on several constraints.
+- **Testability 3:** expiry, eligibility, approval and sharing rules need clarification before precise acceptance examples can be agreed.
+- **Comparability 4:** capacity, provisional allocations, privacy and changes provide clear comparison points with Scenario 13.
+
+Source: [Scenario 15](../../references/SAAD71000_CA1_Scenario_15_Business_Training_and_Mentoring_Service.docx). These are scenario-based assessments, pending comparison with Elisha’s CA1 analysis and group review.
 
 ## 3 Selected scenario and reason
 
