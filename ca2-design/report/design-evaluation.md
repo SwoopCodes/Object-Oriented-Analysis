@@ -29,7 +29,7 @@ Counts below use directed relationships in the class diagram. The bidirectional 
 | Room | 0 | 1 |
 | UsageRecord | 2 | 0 |
 
-Booking has the most outgoing connections. However, seq-makeBooking.puml also calls Member and Resource from BookingController without corresponding navigable links in the class diagram. Structural counts therefore understate interaction dependencies. Recheck this section after T20 defines packages and interfaces.
+Booking has the most outgoing connections. However, seq-makeBooking.puml also calls Member and Resource from BookingController without corresponding navigable links in the class diagram. Structural counts therefore understate interaction dependencies. T20 has an unmerged package-diagram draft on T20-Package-View_Eron. Recheck these dependencies against its application, domain and persistence layers when reviewed.
 
 ## 3 Controller choice
 
@@ -37,9 +37,9 @@ The [UC05 GRASP rationale](../grasp/grasp-UC05.md) separates booking before arri
 
 ## 4 Object validity
 
-[C01](../contracts/makeBooking.md) requires a Booking linked to Member and Resources, a BookingDate with date and times, status and an associated UsageRecord with excess usage. The [booking sequence](../diagrams/seq-makeBooking.puml) shows creation but leaves association and status initialisation implicit. UsageRecord.create() receives no excess value. A failure between creations could leave incomplete objects because rollback is unspecified. SC02's refusal and SC04's extension guarantee need preservation; the latter has no sequence branch. Issue #68 tracks these booking gaps.
+[C01](../contracts/makeBooking.md) requires a Booking linked to Member and Resources, a BookingDate with date and times, status and an associated UsageRecord with excess usage. The [booking sequence](../diagrams/seq-makeBooking.puml) shows creation but leaves association and status initialisation implicit. UsageRecord.create() receives no excess value. The sequence leaves recovery from a failure between creations unspecified. SC02's refusal and SC04's extension guarantee need preservation; the latter has no sequence branch. Issue [#68](https://github.com/SwoopCodes/Object-Oriented-Analysis/issues/68) tracks excess usage, extension refusal, inactive membership and Member–Plan navigation. Association initialisation and partial failure need separate review.
 
-[C02](../contracts/checkInMember.md) requires CheckIn, arrival time, its Booking link and an associated UsageRecord. The [check-in sequence](../diagrams/seq-checkInMember.puml) shows creation but leaves links implicit and omits the unknown-member refusal. Partial failure and repeated check-in could leave missing or duplicate usage records.
+[C02](../contracts/checkInMember.md) requires CheckIn, arrival time, its Booking link and an associated UsageRecord. The [check-in sequence](../diagrams/seq-checkInMember.puml) shows creation but leaves links implicit and omits the unknown-member refusal. Recovery from partial failure and repeated check-in remains unspecified, so NFR02 is not demonstrated.
 
 ## 5 Assumptions
 
@@ -65,4 +65,4 @@ UC05 rejects one controller for booking and check-in, Workspace searching every 
 
 ## 8 Limitations
 
-The models cover UC01 and UC05. Screens, persistence, offline recovery and external integrations remain unspecified. BR02 is noted but SC05's privacy outcome needs implementation evidence. T20 and review corrections remain pending.
+The models cover UC01 and UC05. Screens, persistence, offline recovery and external integrations remain unspecified. BR02 is noted, but seq-checkInMember.puml does not explain how SC05's privacy outcome is enforced. T20 and review corrections remain pending.
