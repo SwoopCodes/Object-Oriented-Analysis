@@ -44,3 +44,12 @@
 |Suggest i add  IPersistenceFacade | Decided to go ahead with it and write it and use it  |
 
 
+## T22
+
+**Date : 25/11/2026**
+| Suggestion | Decision |
+|------------|----------|
+| AI reviewed my finished review records and pointed out what to fix | Accepted, I made the fixes myself |
+| AI pointed out issues to look for: names matching across SSD, contract and sequence diagram; contract postconditions missing from sequence diagrams; failure cases with no alt branch or Gherkin scenario; class and operation names not matching the class diagram | Accepted, I did the checks myself and wrote each issue into the review records |
+
+
