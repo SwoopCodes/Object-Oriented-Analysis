@@ -34,4 +34,13 @@
 |Suggested I add how the 2 use Cases are different in explaining the reasoning of my Controller choice| I then added the explanation and got AI to check if my answer made sense |
 |Suggested i should add examples when explain Cohesion and Coupling|I took the Advice and added examples with the help of AI |
 
+## T20
+
+**Date : 24/11/2026**
+
+| Suggestion | Decision |
+|------------|----------|
+| Remove the Accounting interface | Kept it, because card step 8 asks for it |
+|Suggest i add  IPersistenceFacade | Decided to go ahead with it and write it and use it  |
+
 

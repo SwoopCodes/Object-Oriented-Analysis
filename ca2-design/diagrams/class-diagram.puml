@@ -1,12 +1,12 @@
 @startuml
 
 class BookingController {
-  + checkAvailability(resourceIds : String[*], date : Date, startTime : Time, endTime : Time)
-  + makeBooking(memberNumber : String, resourceIds : String[*], date : Date, startTime : Time, endTime : Time, bookingType : String)
+  + checkAvailability(resourceIds : String[*], date : Date, startTime : Time, endTime : Time) : AvailabilityResult
+  + makeBooking(memberNumber : String, resourceIds : String[*], date : Date, startTime : Time, endTime : Time, bookingType : String) : BookingResult
 }
 
 class CheckInController {
-  + checkInMember(memberNumber : String)
+  + checkInMember(memberNumber : String) : CheckInResult
 }
 
 class Workspace {
@@ -93,4 +93,61 @@ CheckIn "0..1" --> "0..*" UsageRecord
 Resource "0..*" --> "0..*" Fault
 
 Resource <|-- Room
+
+' ---- T20: result types (step 17 needs these to exist) ----
+class AvailabilityResult {
+  - success : Boolean
+  - errorCode : String
+  - message : String
+}
+
+class BookingResult {
+  - success : Boolean
+  - errorCode : String
+  - message : String
+  - status : String
+}
+
+class CheckInResult {
+  - success : Boolean
+  - errorCode : String
+  - message : String
+  - arrivalTime : Time
+}
+
+' ---- T20: interfaces (step 15) ----
+interface IPersistenceFacade <<interface>> {
+  + get(oid : String, type : String) : Object
+  + put(oid : String, obj : Object)
+}
+
+interface IAccessSystemAdapter <<interface>> {
+  + sendArrival(checkIn : CheckIn)
+}
+
+interface IAccountingAdapter <<interface>> {
+  + postUsage(record : UsageRecord)
+}
+
+' ---- T20: classes that provide them (step 16) ----
+class PersistenceFacade
+class AccessSystemAdapter
+class AccountingAdapter
+
+PersistenceFacade ..|> IPersistenceFacade
+AccessSystemAdapter ..|> IAccessSystemAdapter
+AccountingAdapter ..|> IAccountingAdapter
+
+' ---- T20: who returns / uses what ----
+' controllers make these results and hand them back
+BookingController ..> AvailabilityResult : returns
+BookingController ..> BookingResult : returns
+CheckInController ..> CheckInResult : returns
+
+' who uses each interface (architecture.md section 2)
+Workspace ..> IPersistenceFacade : get
+BookingController ..> IPersistenceFacade : put
+CheckInController ..> IPersistenceFacade : put
+CheckInController ..> IAccessSystemAdapter : after CQ13
+
 @enduml
