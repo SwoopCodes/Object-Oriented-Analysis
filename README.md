@@ -17,5 +17,5 @@ More prefixes will be added for requirements, rules, use cases and scenarios.
 
 ## CA2 baseline
 
-Tag: `ca2-submission` (21/11/2026)
+Tag: `ca2-submission` (26/11/2026)
 Agreed by: Patryk, Elisha, Eron, Albin
