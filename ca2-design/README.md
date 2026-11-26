@@ -17,13 +17,14 @@ Give Tralee Enterprise Workspace and its members one reliable, shared record of 
 
 - **contracts/** – operation contracts. Each one says what a system event changes, for example *makeBooking*.
 - **crc/** – CRC cards. Each card lists a class, what it does, and which classes it works with.
-- **decisions/** – decision records DR-001 to DR-003. Each one says what we chose and why.
-- **diagrams/** – use case, SSD, class and sequence diagrams. The *.puml* file is the source and the *.png* file is the picture.
-- **docs/** – AI use logs, process notes and board screenshots.
-- **report/** – the scenario selection record and the change log.
+- **decisions/** – decision records DR-001 and DR-004. Each one says what we chose and why.
+- **diagrams/** – use case, SSD, class, sequence and package diagrams. The *.puml* file is the source and the *.png* file is the picture.
+- **docs/** – AI use logs, process notes, board screenshots and design reviews.
+- **grasp/** – GRASP notes. Each one says why a class got a job in UC01 or UC05.
+- **report/** – *architecture.md* (the packages, layers and how they connect) and *design-scope.md* (which use cases CA2 covers and why).
 - **use-cases/** – full use cases, for example UC05 Check In Member.
 
 ## CA2 baseline
 
-Tag: `ca2-submission` (21/11/2026)
+Tag: `ca2-submission` (26/11/2026)
 Agreed by: Patryk, Elisha, Eron, Albin
