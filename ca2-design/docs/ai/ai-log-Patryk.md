@@ -1,5 +1,7 @@
 # AI use log - Patryk Graszk
 
+Tool: Claude Sonnet 5.5
+
 **11/11/2026 - Review of SSD for UC01 Make Booking**
 
 | Suggestion | Decision |
@@ -23,9 +25,11 @@
 
 **25/11/2026 - Fixes to seq-makeBooking from review RV-01**
 
-| Ai Suggestion | Decision |
-|------------|----------|
-| UsageRecord create() had no values. Pass excessUsage in and add a note. | Kept suggestion |
-| Active membership is a precondition, so remove the hasActiveMembership() check. | Kept suggestion |
-| Add a 4b branch, and split 4a and 5a so each has its own message. | Kept suggestion |
-| Member called Plan with no link. Go through Membership and update the class diagram, CRC card and review files. | Kept suggestion |
+Issues came from Eron's RV-01 review (rows 1, 2, 3, 5 and 7). The fix suggestions came from AI.
+
+| Issue source | AI suggestion | Decision |
+|------------|----------|----------|
+| Eron, RV-01 row 1 | UsageRecord create() had no values. Pass excessUsage in and add a note. | Kept suggestion |
+| Eron, RV-01 row 2 | Active membership is a precondition, so remove the hasActiveMembership() check. | Kept suggestion |
+| Eron, RV-01 rows 3 and 5 | Add a 4b branch, and split 4a and 5a so each has its own message. | Kept suggestion |
+| Eron, RV-01 row 7 | Member called Plan with no link. Go through Membership and update the class diagram, CRC card and review files. | Kept suggestion |
