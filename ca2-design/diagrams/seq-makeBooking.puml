@@ -11,10 +11,6 @@ participant "r : Resource" as R
 A -> C : makeBooking(memberNumber, resourceIds, date, startTime, endTime, bookingType)
 C -> W : findMember(memberNumber)
 W --> C : m
-C -> M : hasActiveMembership()
-M -> MS : isActive()
-MS --> M : Boolean
-M --> C : Boolean
 
 loop for each resourceId
   C -> W : findResource(resourceId)
@@ -23,8 +19,13 @@ loop for each resourceId
   R --> C : Boolean
 end
 
-alt a resource is not free (4a, 5a)
-  C --> A : refused - not available
+alt resource already booked (4a)
+  C --> A : Unable to book. Resource booked by another member
+else extension runs into a later confirmed booking (4b)
+  C --> A : Extension refused
+  note right of C : Both bookings keep their times (BR03).
+else equipment not available (5a)
+  C --> A : Unable to book with requested resource
 else all resources free
   C -> M : createBooking(resources, date, startTime, endTime, bookingType)
   create "b : Booking" as B
@@ -35,15 +36,16 @@ else all resources free
   M --> C : b
   C -> B : recordUsage()
   B -> M : isOverAllowance(hours)
-  M -> MS : getPlan()
-  MS --> M : plan
-  M -> P : isOverAllowance(hours)
-  P --> M : Boolean
+  M -> MS : isOverAllowance(hours)
+  MS -> P : isOverAllowance(hours)
   note right of P : What happens when usage is over the allowance is still open (CQ01, CQ09).
+  P --> MS : Boolean
+  MS --> M : Boolean
   M --> B : Boolean
   create ":UsageRecord" as U
-  B -> U : create()
+  B -> U : create(excessUsage)
+  note right of U : excessUsage is the hours over the allowance, or 0 if none.
   B --> C : UsageRecord
   C --> A : booking status (Confirmed or Provisional)
-  end
+end
 @enduml

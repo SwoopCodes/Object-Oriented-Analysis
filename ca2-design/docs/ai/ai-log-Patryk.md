@@ -20,3 +20,12 @@
 | Checked the draft. Every call is from the shared names table, Booking, BookingDate and UsageRecord creation is shown, the refusal path is in an alt block, there's no database lifeline and the controller doesn't check rules itself. Rendered it to confirm it compiles. | No changes needed from this. |
 | The CQ01/CQ09 note rendered below the alt box, away from the call it's about. Move it straight after `P --> M : Boolean`. | Kept suggestion.. Moved the note next to the isOverAllowance call |
 | No path shown for when hasActiveMembership() returns false. | Left it out |
+
+**25/11/2026 - Fixes to seq-makeBooking from review RV-01**
+
+| Ai Suggestion | Decision |
+|------------|----------|
+| UsageRecord create() had no values. Pass excessUsage in and add a note. | Kept suggestion |
+| Active membership is a precondition, so remove the hasActiveMembership() check. | Kept suggestion |
+| Add a 4b branch, and split 4a and 5a so each has its own message. | Kept suggestion |
+| Member called Plan with no link. Go through Membership and update the class diagram, CRC card and review files. | Kept suggestion |

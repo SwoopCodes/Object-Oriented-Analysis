@@ -15,12 +15,12 @@ I checked each operation in the class diagram is used in a sequence diagram and,
 | CheckInController.checkInMember | Yes | seq-checkInMember | C02 | Controller calls Member and Booking but is only linked to Workspace. No change. |
 | Workspace.findMember | Yes | seq-makeBooking, seq-checkInMember | n/a | Workspace to Member has no multiplicity on the Member end. No change. |
 | Workspace.findResource | Yes | seq-checkAvailability, seq-makeBooking | n/a | None |
-| Member.hasActiveMembership | Yes | seq-makeBooking | n/a | Clashes with the C01 precondition (see RV-01 row 2). No change. |
+| Member.hasActiveMembership | Yes | None | n/a | Active membership is a C01 precondition, so we removed the call (see RV-01 row 2). |
 | Member.createBooking | Yes | seq-makeBooking | n/a | None |
 | Member.findBookingFor | Yes | seq-checkInMember | n/a | None |
 | Member.isOverAllowance | Yes | seq-makeBooking | n/a | None |
-| Membership.isActive | Yes | seq-makeBooking | n/a | None |
-| Membership.getPlan | Yes | seq-makeBooking | n/a | None |
+| Membership.isActive | Yes | None | n/a | Not called because of the C01 precondition (see RV-01 row 2). |
+| Membership.isOverAllowance | Yes | seq-makeBooking | n/a | None |
 | Plan.isOverAllowance | Yes | seq-makeBooking | n/a | None |
 | Booking.addDate | Yes | seq-makeBooking | n/a | None |
 | Booking.recordUsage | Yes | seq-makeBooking | n/a | None |

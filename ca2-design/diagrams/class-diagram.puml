@@ -26,7 +26,7 @@ class Member {
 class Membership {
   - status : String
   + isActive() : Boolean
-  + getPlan() : Plan
+  + isOverAllowance(hours : Integer) : Boolean
 }
 
 class Plan {
