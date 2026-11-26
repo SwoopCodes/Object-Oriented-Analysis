@@ -26,7 +26,7 @@ The work also splits cleanly into two slices: UC01 Make Booking and UC05 Check I
 
 | Option | Reason not picked |
 |--------|-------------------|
-| Scenario 16: Engineering Workshop Job Coordination Service (Eron) | [Eron to add] |
+| Scenario 16: Engineering Workshop Job Coordination Service (Eron) |  The users were clear, but the brief had many overlapping situations that did not fit together well and left a lot of ambiguity, making it hard to build a consistent design around. Scenario 13 already has a developed analysis and concrete booking examples that support the selected design.|
 | Scenario 12: Holiday Cottage Turnaround Service (Albin) | [Albin to add] |
 | Scenario 15: Business Training and Mentoring Service (Elisha) | Proposed rationale: it offers rich behaviour, but spans courses, mentoring, reviews and partner sharing, with eligibility and matching policies still open. Scenario 13 already has a developed analysis and concrete booking examples that support the selected design. |
 
@@ -45,7 +45,7 @@ Group and scenario has been approved by Andrew Shields
 
 | Member | Date |
 |--------|------|
-| Eron | DD/MM/YYYY |
+| Eron | 26/11/2026 |
 | Patryk | MM/MM/YYYY |
 | Albin | DD/MM/YYYY |
 | Elisha | DD/MM/YYYY |
