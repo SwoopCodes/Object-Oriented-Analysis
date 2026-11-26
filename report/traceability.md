@@ -1,3 +1,5 @@
+CA1 matrix. For CA2 see ca2-design/report/traceability.md.
+
 # Traceability matrix
 
 | Requirement | MoSCoW | Problem / evidence | Stakeholder | User story | Use case | Gherkin | Domain concept(s) |

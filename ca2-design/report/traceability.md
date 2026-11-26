@@ -25,4 +25,4 @@
 | seq-makeBooking has BookingController call Booking.recordUsage(), but the grasp-UC01 coupling paragraph only lists Workspace, Member and Resource | grasp-UC01.md | Albin |
 | grasp-UC01 has a row for checking the membership is active, but no sequence diagram calls hasActiveMembership() since RV-01 row 2 made it a C01 precondition | grasp-UC01.md | Albin |
 | The class diagram says the Access system link comes "after CQ13", but Rules-and-uncertainty.md has no CQ13 | class-diagram.puml, report/Rules-and-uncertainty.md | Eron |
-| ssd-UC05 and C02 have a "member number not found" path (2a), but seq-checkInMember doesn't (recorded as a known gap in RV-02 row 1) | seq-checkInMember.puml | Albin |
+| ssd-UC05 and C02 have a "member number not found" path (2a), but seq-checkInMember doesn't (recorded as a known gap in RV-02 row 1) | seq-checkInMember.puml | Albin |# CA2 traceability matrix
