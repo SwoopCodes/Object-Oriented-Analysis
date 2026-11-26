@@ -44,5 +44,5 @@ The group reviewed all AI suggestions before using them, and every member checke
 |---|---|
 | Albin Kastrati |26/11/2026 |
 | Eron Baftjari | |
-| Patryk | |
+| Patryk | 26/11/2026 |
 | Elisha | |
