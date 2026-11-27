@@ -38,7 +38,7 @@ Issues came from Eron's RV-01 review (rows 1, 2, 3, 5 and 7). The fix suggestion
 
 | Suggestion | Decision |
 |------------|----------|
-| First draft of the statement from the git history, PRs and my AI log. | Kept as a base. I edited the wording, added the tool name and checked the PR numbers myself |
+| Wrote initial version using git history as reference, then refined manually. | Kept as a base. I edited the wording, added the tool name and checked the PR numbers myself |
 | ai-declaration.md was my individual version and would overwrite Albin's group file. | Kept suggestion. Restored the group file |
 | DR-001 had Elisha's approval date filled in and Windows line endings. | Kept suggestion. Reverted the file |
 | The 17/11/2026 meeting date came after PR #52 was merged on 13/11. | Kept suggestion. Removed the date |
