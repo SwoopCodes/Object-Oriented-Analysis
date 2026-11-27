@@ -53,7 +53,7 @@ We kept most of the CA1 analysis for Scenario 13 as it was. The table lists what
 | UC02, UC03, UC04, UC06, UC07, UC08, UC09 | Deferred (not rejected) | Each reason is in the "Not selected" list of [design-scope.md](design-scope.md). That list says these are proposed for group review |
 | FR05 on UC01 | Gap found | UC01's Related row leaves out FR05, but its flow records usage ([design-scope.md](design-scope.md)) |
 | CQ13 | Gap found | Cited in [design-scope.md](design-scope.md) and the class diagram, but not defined in [Rules-and-uncertainty.md](../../report/Rules-and-uncertainty.md) |
-| Other members' CA1 changes | not provided | Rows will be added if Elisha, Eron or Albin report changes or merges from their own CA1 |
+| Other members' CA1 changes | [pending] | Rows will be added if Elisha, Eron or Albin report changes or merges from their own CA1 |
 
 ## Open items
 
