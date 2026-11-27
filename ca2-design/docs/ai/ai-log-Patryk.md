@@ -34,6 +34,12 @@ Issues came from Eron's RV-01 review (rows 1, 2, 3, 5 and 7). The fix suggestion
 | Eron, RV-01 rows 3 and 5 | Add a 4b branch, and split 4a and 5a so each has its own message. | Kept suggestion |
 | Eron, RV-01 row 7 | Member called Plan with no link. Go through Membership and update the class diagram, CRC card and review files. | Kept suggestion |
 
+**26/11/2026 - PR comment consistency checks**
+
+| Suggestion | Decision |
+|------------|----------|
+| Added file comments on #69, #70, #57 after merging to check cross-file consistency | Kept. Verified ServicesFactory appears in architecture.md and package-diagram.puml but missing from class-diagram.puml |
+
 **26/11/2026 - Contribution statement**
 
 | Suggestion | Decision |
