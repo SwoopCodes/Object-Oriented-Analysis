@@ -13,9 +13,9 @@ Scale: 1 to 5, where 5 is best. Each member scores their own scenario.
 | Member | Scenario | Scope | Behaviour | OO potential | Sliceability | Testability | Comparability | Total |
 |---|---|---|---|---|---|---|---|---|
 | Patryk Graszk | 13 | 4 | 4 | 4 | 3 | 4 | pending | 19 of 25 (five criteria scored) |
-| Elisha Seruma | not provided | not provided | not provided | not provided | not provided | not provided | not provided | not provided |
-| Eron Baftjari | not provided | not provided | not provided | not provided | not provided | not provided | not provided | not provided |
-| Albin Kastrati | not provided | not provided | not provided | not provided | not provided | not provided | not provided | not provided |
+| Elisha Seruma | [pending] | [pending] | [pending] | [pending] | [pending] | [pending] | [pending] | [pending] |
+| Eron Baftjari | [pending] | [pending] | [pending] | [pending] | [pending] | [pending] | [pending] | [pending] |
+| Albin Kastrati | [pending] | [pending] | [pending] | [pending] | [pending] | [pending] | [pending] | [pending] |
 
 ### Why I scored Scenario 13 this way
 
