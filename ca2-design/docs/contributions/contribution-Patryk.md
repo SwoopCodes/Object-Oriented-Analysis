@@ -60,7 +60,7 @@ What AI did not do:
 
 - It did not choose the scenario or the use cases.
 - It did not decide business rules or open questions.
-- I wrote the first version of each file myself.
+- It did not write my files from scratch
 
 ## Individual AI declaration
 
